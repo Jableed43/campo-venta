@@ -1,0 +1,878 @@
+<!-- /*
+* Template Name: Property
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Campo Labrita" />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <meta name="description" content="Campo de 150 hectáreas con bosque nativo en Labrita, Santiago del Estero. Infraestructura lista, riego garantizado. $900/ha. Ideal para agricultura, ganadería y turismo rural." />
+    <meta name="keywords" content="campo en venta, santiago del estero, labrita, bosque nativo, campo agricola, campo ganadero, terreno rural" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* WhatsApp Floating Button */
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .whatsapp-float:hover {
+        background-color: #20ba5a;
+        transform: scale(1.1);
+        color: #FFF;
+        text-decoration: none;
+      }
+      .whatsapp-float .icon-whatsapp:before {
+        font-size: 35px;
+      }
+      .map-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+      }
+      .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+      .img-gal {
+        display: block;
+        overflow: hidden;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+      .img-gal:hover {
+        transform: scale(1.05);
+      }
+      .img-gal img {
+        transition: transform 0.3s ease;
+      }
+      @media (max-width: 768px) {
+        .whatsapp-float {
+          width: 50px;
+          height: 50px;
+          bottom: 20px;
+          right: 20px;
+          font-size: 25px;
+        }
+      }
+      /* Estilos para sección de oportunidades únicas */
+      .opportunity-section {
+        background: linear-gradient(135deg, #2d5016 0%, #4a7c2a 100%);
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+      .opportunity-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.05)"/></svg>');
+        opacity: 0.3;
+      }
+      .opportunity-card {
+        background: rgba(255,255,255,0.1);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        transition: all 0.3s ease;
+        height: 100%;
+        padding: 2rem;
+        text-align: center;
+      }
+      .opportunity-card:hover {
+        transform: translateY(-8px);
+        background: rgba(255,255,255,0.15);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      }
+      .opportunity-icon {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+      .opportunity-number {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: #ffd700;
+        color: #2d5016;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      .opportunity-highlight {
+        background: rgba(255,255,255,0.15);
+        border-radius: 15px;
+        border: 2px solid rgba(255,255,255,0.3);
+        padding: 2rem;
+        margin-top: 3rem;
+      }
+      @media (max-width: 768px) {
+        .opportunity-card {
+          padding: 1.5rem;
+        }
+        .opportunity-number {
+          width: 35px;
+          height: 35px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+
+    <title>
+      Campo 150 ha en Venta - Labrita, Santiago del Estero | $900/ha
+    </title>
+  </head>
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <nav class="site-nav">
+      <div class="container">
+        <div class="menu-bg-wrap">
+          <div class="site-navigation">
+            <a href="index.html" class="logo m-0 float-start">Campo Labrita</a>
+
+            <ul
+              class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
+            >
+              <li class="active"><a href="#inicio">Inicio</a></li>
+              <li><a href="#caracteristicas">Características</a></li>
+              <li><a href="#ubicacion">Ubicación</a></li>
+              <li><a href="#galeria">Galería</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <a
+              href="#"
+              class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+              data-toggle="collapse"
+              data-target="#main-navbar"
+            >
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero" id="inicio">
+      <div class="hero-slide">
+        <div
+          class="img overlay"
+          style="background-image: url('images/hero_bg_3.jpg')"
+        ></div>
+        <div
+          class="img overlay"
+          style="background-image: url('images/hero_bg_2.jpg')"
+        ></div>
+        <div
+          class="img overlay"
+          style="background-image: url('images/hero_bg_1.jpg')"
+        ></div>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-9 text-center">
+            <h1 class="heading" data-aos="fade-up">
+              150 Hectáreas de Oportunidad en Santiago del Estero
+            </h1>
+            <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="100">
+              Bosque Nativo + Infraestructura Lista - Tu Inversión Ideal
+            </p>
+            <div class="mb-4" data-aos="fade-up" data-aos-delay="150">
+              <h2 class="text-white display-4 fw-bold mb-2">$900/ha</h2>
+              <p class="text-white-50">Inversión total: $135.000</p>
+            </div>
+            <div class="d-flex gap-3 justify-content-center flex-wrap" data-aos="fade-up" data-aos-delay="200">
+              <a href="#contacto" class="btn btn-primary btn-lg px-5 py-3">CONSULTAR AHORA</a>
+              <a href="#caracteristicas" class="btn btn-outline-light btn-lg px-5 py-3">VER DETALLES</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="caracteristicas">
+      <div class="container">
+        <div class="row mb-5 justify-content-center text-center">
+          <div class="col-lg-7">
+            <h2 class="font-weight-bold text-primary heading mb-4">
+              ¿Por qué este campo es único?
+            </h2>
+            <p class="text-black-50">
+              Una oportunidad excepcional de inversión con características que lo hacen único en el mercado
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="box-feature h-100 text-center">
+              <span class="flaticon-house-1 mb-3 d-block" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="mb-3">Bosque Nativo Virgen</h3>
+              <p>
+                Última oportunidad de adquirir un campo con bosque nativo intacto. Maderas valiosas: quebracho y algarrobo.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="box-feature h-100 text-center">
+              <span class="flaticon-building mb-3 d-block" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="mb-3">Infraestructura a la Puerta</h3>
+              <p>
+                Luz y agua a solo 200m. Acceso directo desde Ruta 9. Listo para desarrollar tu proyecto.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="box-feature h-100 text-center">
+              <span class="flaticon-house-3 mb-3 d-block" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="mb-3">Riego Garantizado</h3>
+              <p>
+                Canal de riego del Dique Embalse Sauzal atraviesa el campo. Agua asegurada para producción.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="box-feature h-100 text-center">
+              <span class="flaticon-house mb-3 d-block" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="mb-3">Ubicación Estratégica</h3>
+              <p>
+                Entre Ciudad Capital y Termas de Río Hondo. A 5km de la autopista principal. Acceso fácil.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7">
+            <h2 class="font-weight-bold text-primary heading mb-4">
+              Especificaciones Técnicas
+            </h2>
+            <p class="text-black-50">
+              Toda la información detallada del campo
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-center">
+              <span class="flaticon-house d-block mb-3" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="heading">Superficie</h3>
+              <p class="text-black-50 mb-0">
+                <strong>150 hectáreas</strong><br>
+                (1.500 m x 1.000 m)
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-center">
+              <span class="flaticon-building d-block mb-3" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="heading">Precio</h3>
+              <p class="text-black-50 mb-0">
+                <strong>$900/ha</strong><br>
+                Inversión total: $135.000
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-center">
+              <span class="flaticon-house-3 d-block mb-3" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="heading">Ampliación</h3>
+              <p class="text-black-50 mb-0">
+                Posibilidad hasta<br>
+                <strong>300 ha adicionales</strong>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="text-center">
+              <span class="flaticon-house-1 d-block mb-3" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="heading">Ubicación</h3>
+              <p class="text-black-50 mb-0">
+                <strong>Labrita</strong><br>
+                Santiago del Estero
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="text-center">
+              <span class="flaticon-building d-block mb-3" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="heading">Acceso</h3>
+              <p class="text-black-50 mb-0">
+                <strong>5 km</strong> de Ruta 9<br>
+                Camino vecinal enripiado
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center">
+              <span class="flaticon-house d-block mb-3" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="heading">Distancias</h3>
+              <p class="text-black-50 mb-0">
+                Ciudad Capital: <strong>44 km</strong><br>
+                Termas Río Hondo: <strong>43 km</strong><br>
+                Río Dulce: <strong>9 km</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="ubicacion">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7">
+            <h2 class="font-weight-bold text-primary heading mb-4">
+              Ubicación Estratégica
+            </h2>
+            <p class="text-black-50">
+              Estratégicamente ubicado entre dos ciudades importantes con acceso directo desde la autopista principal
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="mb-4">
+              <h3 class="h4 mb-3">Puntos de Referencia</h3>
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <strong>Ciudad Capital:</strong> 44 km<br>
+                  <small class="text-black-50">Acceso a servicios y comercios principales</small>
+                </li>
+                <li class="mb-3">
+                  <strong>Termas de Río Hondo:</strong> 43 km<br>
+                  <small class="text-black-50">Destino turístico importante de la región</small>
+                </li>
+                <li class="mb-3">
+                  <strong>Río Dulce:</strong> 9 km<br>
+                  <small class="text-black-50">Fuente de agua y recreación</small>
+                </li>
+                <li class="mb-3">
+                  <strong>Ruta 9:</strong> 5 km<br>
+                  <small class="text-black-50">Autopista principal - Acceso directo</small>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="h4 mb-3">Ventajas de la Ubicación</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2">✅ Cercanía a centros urbanos importantes</li>
+                <li class="mb-2">✅ Acceso fácil desde autopista</li>
+                <li class="mb-2">✅ Zona en crecimiento y desarrollo</li>
+                <li class="mb-2">✅ Proyectos de infraestructura en curso</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="map-responsive">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5983.601105315116!2d-64.53799980273641!3d-27.598302942107757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9423593df74dbdeb%3A0xc051972efca13eec!2sLa%20abrita!5e1!3m2!1ses!2sar!4v1768939880369!5m2!1ses!2sar" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section bg-light" id="garantias">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7">
+            <h2 class="font-weight-bold text-primary heading mb-4">
+              Garantías y Documentación
+            </h2>
+            <p class="text-black-50">
+              Transacción segura y transparente con documentación completa
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="d-flex">
+              <span class="text-success me-3" style="font-size: 2rem;">✅</span>
+              <div>
+                <h3 class="h4 mb-3">Escritura Legal</h3>
+                <p class="text-black-50">
+                  Cesión de acciones y derechos hereditarios. Documentación legal en regla.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="d-flex">
+              <span class="text-success me-3" style="font-size: 2rem;">✅</span>
+              <div>
+                <h3 class="h4 mb-3">Documentación Completa</h3>
+                <p class="text-black-50 mb-0">
+                  • Planos oficiales<br>
+                  • Asesoramiento legal (abogados)<br>
+                  • Asesoramiento inmobiliario (martilleros)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="lead text-primary mb-0">
+              <strong>Transacción segura y transparente</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-4 bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7">
+            <h2 class="font-weight-bold heading text-primary mb-4">
+              Características del Terreno
+            </h2>
+            <p class="text-black-50">
+              Calidad y potencial que hacen de este campo una inversión excepcional
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-between mb-5">
+          <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
+            <div class="img-about dots">
+              <img src="images/hero_bg_3.jpg" alt="Campo con bosque nativo" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-leaf"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Suelo Rico</h3>
+                <p class="text-black-50">
+                  Franco arenoso, rico en nitrógeno. Ideal para cultivos de alta calidad.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-cloud"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Régimen de Lluvia</h3>
+                <p class="text-black-50">
+                  500 mm anuales. Clima favorable para agricultura y ganadería.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-terrain"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Topografía</h3>
+                <p class="text-black-50">
+                  Con pendiente, sin bajos ni lagunas. Libre de represamiento.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-nature"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Flora Nativa</h3>
+                <p class="text-black-50">
+                  Quebracho blanco, colorado, algarrobo negro, mistol, garabato, jarilla.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex feature-h">
+              <span class="wrap-icon me-3">
+                <span class="icon-map"></span>
+              </span>
+              <div class="feature-text">
+                <h3 class="heading">Delimitación</h3>
+                <p class="text-black-50">
+                  Perímetro parcialmente delimitado con postes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="potenciales">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7">
+            <h2 class="font-weight-bold text-primary heading mb-4">
+              Potenciales de Inversión
+            </h2>
+            <p class="text-black-50">
+              Múltiples oportunidades para desarrollar tu proyecto
+            </p>
+          </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="box-feature h-100 text-center">
+              <span class="flaticon-house mb-3 d-block" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="mb-3">Agricultura</h3>
+              <p>
+                Suelo rico en nitrógeno, riego garantizado y 500mm de lluvia anual. Ideal para cultivos diversos.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="box-feature h-100 text-center">
+              <span class="flaticon-building mb-3 d-block" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="mb-3">Ganadería</h3>
+              <p>
+                Zona ganadera reconocida. Campo con pendiente ideal para bovinos y caprinos. Sin encharcamientos.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="box-feature h-100 text-center">
+              <span class="flaticon-house-3 mb-3 d-block" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="mb-3">Turismo Rural</h3>
+              <p>
+                Bosque nativo virgen ideal para cabañas y ecoturismo. Cerca de Termas de Río Hondo.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="box-feature h-100 text-center">
+              <span class="flaticon-house-1 mb-3 d-block" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="mb-3">Explotación Forestal</h3>
+              <p>
+                Maderas valiosas: quebracho y algarrobo. Bosque nativo sostenible con gran potencial.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="box-feature h-100 text-center">
+              <span class="flaticon-building mb-3 d-block" style="font-size: 3rem; color: #2d5016;"></span>
+              <h3 class="mb-3">Inversión a Futuro</h3>
+              <p>
+                Proyecto de riego en desarrollo. Zona en crecimiento. Posibilidad de ampliación hasta 300 ha.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section opportunity-section">
+      <div class="container" style="position: relative; z-index: 1;">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="font-weight-bold heading mb-4" style="color: white;">
+              ¿Por Qué Esta Es Una Oportunidad Única?
+            </h2>
+            <p class="mb-0" style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">
+              Cinco razones que hacen de este campo una inversión excepcional
+            </p>
+          </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="opportunity-card">
+              <div class="opportunity-icon">
+                <span class="icon-cloud" style="font-size: 4rem; color: #87CEEB; display: block;"></span>
+                <span class="opportunity-number">1</span>
+              </div>
+              <h3 class="h4 mb-3" style="color: white; font-weight: 600;">Riego Garantizado</h3>
+              <p class="mb-0" style="color: rgba(255,255,255,0.9); line-height: 1.6;">
+                El canal del <strong>Dique Embalse Sauzal</strong> atraviesa el campo. Transformación de secano a regadío asegurada.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="opportunity-card">
+              <div class="opportunity-icon">
+                <span class="icon-tree" style="font-size: 4rem; color: #90EE90; display: block;"></span>
+                <span class="opportunity-number">2</span>
+              </div>
+              <h3 class="h4 mb-3" style="color: white; font-weight: 600;">Bosque Nativo Virgen</h3>
+              <p class="mb-0" style="color: rgba(255,255,255,0.9); line-height: 1.6;">
+                Recurso <strong>escaso y valioso</strong>. Quebracho y algarrobo de alto valor comercial. Especies protegidas.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="opportunity-card">
+              <div class="opportunity-icon">
+                <span class="icon-map-marker" style="font-size: 4rem; color: #FFD700; display: block;"></span>
+                <span class="opportunity-number">3</span>
+              </div>
+              <h3 class="h4 mb-3" style="color: white; font-weight: 600;">Ubicación Estratégica</h3>
+              <p class="mb-0" style="color: rgba(255,255,255,0.9); line-height: 1.6;">
+                Entre <strong>Capital y Termas de Río Hondo</strong>. A solo 5km de Ruta 9. Acceso directo a centros urbanos.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="opportunity-card">
+              <div class="opportunity-icon">
+                <span class="icon-trending_up" style="font-size: 4rem; color: #32CD32; display: block;"></span>
+                <span class="opportunity-number">4</span>
+              </div>
+              <h3 class="h4 mb-3" style="color: white; font-weight: 600;">Revalorización 50-100%</h3>
+              <p class="mb-0" style="color: rgba(255,255,255,0.9); line-height: 1.6;">
+                Potencial de <strong>plusvalía del 50% al 100%</strong> con el desarrollo del proyecto de riego. Inversión inteligente.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="opportunity-card">
+              <div class="opportunity-icon">
+                <span class="icon-money" style="font-size: 4rem; color: #FFA500; display: block;"></span>
+                <span class="opportunity-number">5</span>
+              </div>
+              <h3 class="h4 mb-3" style="color: white; font-weight: 600;">Múltiples Rentabilidades</h3>
+              <p class="mb-0" style="color: rgba(255,255,255,0.9); line-height: 1.6;">
+                <strong>4 fuentes de ingreso:</strong> Agricultura, Ganadería, Turismo Rural y Explotación Forestal. Diversificación asegurada.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <div class="opportunity-highlight">
+              <h3 class="h4 mb-3" style="color: white; font-weight: 600;">💡 Inversión Total: $135.000</h3>
+              <p class="mb-0" style="color: rgba(255,255,255,0.95); font-size: 1.1rem;">
+                <strong>$900 por hectárea</strong> - Precio competitivo con potencial de revalorización excepcional
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section bg-light" id="galeria">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7">
+            <h2 class="font-weight-bold text-primary heading mb-4">
+              Galería del Campo
+            </h2>
+            <p class="text-black-50">
+              Descubre la belleza y el potencial de este campo único
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <a href="images/hero_bg_1.jpg" class="img-gal">
+              <img src="images/hero_bg_1.jpg" alt="Vista del campo" class="img-fluid rounded">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <a href="images/hero_bg_2.jpg" class="img-gal">
+              <img src="images/hero_bg_2.jpg" alt="Bosque nativo" class="img-fluid rounded">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <a href="images/hero_bg_3.jpg" class="img-gal">
+              <img src="images/hero_bg_3.jpg" alt="Paisaje del campo" class="img-fluid rounded">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="images/img_1.jpg" class="img-gal">
+              <img src="images/img_1.jpg" alt="Terreno" class="img-fluid rounded">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <a href="images/img_2.jpg" class="img-gal">
+              <img src="images/img_2.jpg" alt="Flora nativa" class="img-fluid rounded">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <a href="images/img_3.jpg" class="img-gal">
+              <img src="images/img_3.jpg" alt="Vista aérea" class="img-fluid rounded">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="contacto">
+      <div class="row justify-content-center footer-cta" data-aos="fade-up">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="mb-4">¿Listo para hacer realidad tu proyecto?</h2>
+          <p class="lead text-black-50 mb-4">
+            Contacta ahora y recibe toda la información detallada sobre este campo único
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a
+              href="#contacto"
+              class="btn btn-primary text-white py-3 px-5"
+              >SOLICITAR INFORMACIÓN</a
+            >
+            <a
+              href="#contacto"
+              class="btn btn-outline-primary py-3 px-5"
+              >AGENDAR VISITA</a
+            >
+            <a
+              href="#contacto"
+              class="btn btn-outline-secondary py-3 px-5"
+              >CONSULTAR PRECIO</a
+            >
+          </div>
+        </div>
+        <!-- /.col-lg-7 -->
+      </div>
+      <!-- /.row -->
+    </div>
+
+    <div class="site-footer" id="contacto">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="widget">
+              <h3>Contacto</h3>
+              <p class="mb-3">Campo en Venta - Labrita, Santiago del Estero</p>
+              <ul class="list-unstyled links">
+                <li><a href="tel://+549XXXXXXXXX">+54 9 XXXXXXXXX</a></li>
+                <li>
+                  <a href="mailto:contacto@campolabrita.com">contacto@campolabrita.com</a>
+                </li>
+                <li class="mt-3">
+                  <a href="https://wa.me/549XXXXXXXXX?text=Hola,%20me%20interesa%20el%20campo%20en%20Labrita" 
+                     target="_blank" 
+                     class="btn btn-success">
+                    <span class="icon-whatsapp me-2"></span>Contactar por WhatsApp
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-6 -->
+          <div class="col-lg-6">
+            <div class="widget">
+              <h3>Información del Campo</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#potenciales">Potenciales de Inversión</a></li>
+                <li><a href="#garantias">Garantías y Documentación</a></li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-6 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              Campo Labrita. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.site-footer -->
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/549XXXXXXXXX?text=Hola,%20me%20interesa%20el%20campo%20de%20150%20hectáreas%20en%20Labrita" 
+       target="_blank" 
+       class="whatsapp-float" 
+       title="Contactar por WhatsApp">
+      <span class="icon-whatsapp"></span>
+    </a>
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
