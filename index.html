@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
 
-    <link rel="stylesheet" href="css/tiny-slider.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
 
@@ -126,132 +125,108 @@
         height: 100%;
         object-fit: cover;
       }
-      /* Lightbox Modal */
-      .lightbox {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
+      /* Bootstrap Modal Gallery Styles - Minimal custom CSS */
+      .modal-gallery .modal-dialog {
+        max-width: 95vw;
+        height: 95vh;
+        margin: 2.5vh auto;
+      }
+      .modal-gallery .modal-content {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.95);
-        overflow: hidden;
+        border: none;
       }
-      .lightbox.active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .modal-gallery .modal-body {
+        padding: 20px;
+        height: calc(100% - 56px);
+        overflow-y: auto;
       }
-      .lightbox-content {
-        position: relative;
-        max-width: 90%;
-        max-height: 90vh;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .modal-gallery .carousel-item {
+        text-align: center;
       }
-      .lightbox-content img {
+      .modal-gallery .carousel-item img {
+        max-height: 70vh;
         max-width: 100%;
-        max-height: 90vh;
+        width: auto;
+        height: auto;
         object-fit: contain;
-        border-radius: 8px;
-        user-select: none;
-        -webkit-user-drag: none;
+        display: block;
+        margin: 0 auto;
       }
-      .lightbox-close {
-        position: absolute;
-        top: 20px;
-        right: 35px;
+      .modal-gallery .carousel-caption {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        padding: 15px 20px;
+        margin-top: 15px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
         color: #fff;
-        font-size: 40px;
-        font-weight: bold;
-        cursor: pointer;
-        z-index: 10000;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      .modal-gallery .carousel-caption h5 {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #fff;
+      }
+      .modal-gallery .carousel-caption p {
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 0;
+      }
+      .modal-gallery .modal-header {
+        border-bottom: none;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .modal-gallery .btn-close {
+        filter: invert(1);
+      }
+      .modal-gallery .carousel-control-prev,
+      .modal-gallery .carousel-control-next {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
         width: 50px;
         height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        transition: all 0.3s ease;
-      }
-      .lightbox-close:hover {
-        background: rgba(0, 0, 0, 0.8);
-        transform: rotate(90deg);
-      }
-      .lightbox-nav {
-        position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        border: none;
-        font-size: 30px;
-        padding: 15px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        z-index: 10000;
       }
-      .lightbox-nav:hover {
-        background: rgba(0, 0, 0, 0.8);
+      .modal-gallery .carousel-indicators {
+        position: relative;
+        bottom: auto;
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding: 0;
       }
-      .lightbox-prev {
-        left: 20px;
+      .modal-gallery .carousel-indicators button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.8);
       }
-      .lightbox-next {
-        right: 20px;
+      .modal-gallery .carousel-indicators button.active {
+        background-color: rgba(255, 255, 255, 1);
       }
-      .lightbox-counter {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: #fff;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 10px 20px;
-        border-radius: 20px;
-        font-size: 14px;
-      }
-      /* Mobile scroll horizontal */
       @media (max-width: 768px) {
-        .lightbox-content {
-          max-width: 100%;
-          width: 100%;
-          height: 100%;
-          overflow-x: auto;
-          overflow-y: hidden;
-          scroll-snap-type: x mandatory;
-          -webkit-overflow-scrolling: touch;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          scroll-behavior: smooth;
-        }
-        .lightbox-content img {
-          width: 100vw;
+        .modal-gallery .modal-dialog {
+          max-width: 100vw;
           height: 100vh;
-          object-fit: contain;
-          scroll-snap-align: center;
-          flex-shrink: 0;
-          display: block;
+          margin: 0;
         }
-        .lightbox-nav {
-          display: none;
+        .modal-gallery .modal-body {
+          padding: 15px;
         }
-        .lightbox-close {
-          top: 10px;
-          right: 10px;
+        .modal-gallery .carousel-item img {
+          max-height: 60vh;
+        }
+        .modal-gallery .carousel-caption {
+          padding: 12px 15px;
+          margin-top: 10px;
+        }
+        .modal-gallery .carousel-control-prev,
+        .modal-gallery .carousel-control-next {
           width: 40px;
           height: 40px;
-          font-size: 30px;
-        }
-        .lightbox-counter {
-          bottom: 10px;
-          z-index: 10001;
         }
       }
       @media (max-width: 768px) {
@@ -968,32 +943,32 @@
         </div>
         <div class="row g-4">
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="img-gal" data-gallery="galeria" data-index="0">
+            <div class="img-gal" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="0">
               <img src="images/fotos/galeria_1.png" alt="Galería del campo 1" class="img-fluid rounded">
             </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="img-gal" data-gallery="galeria" data-index="1">
+            <div class="img-gal" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="1">
               <img src="images/fotos/galeria_2.png" alt="Galería del campo 2" class="img-fluid rounded">
             </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="img-gal" data-gallery="galeria" data-index="2">
+            <div class="img-gal" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="2">
               <img src="images/fotos/galeria_3.png" alt="Galería del campo 3" class="img-fluid rounded">
             </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="img-gal" data-gallery="galeria" data-index="3">
+            <div class="img-gal" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="3">
               <img src="images/fotos/galeria_4.png" alt="Galería del campo 4" class="img-fluid rounded">
             </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="img-gal" data-gallery="galeria" data-index="4">
+            <div class="img-gal" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="4">
               <img src="images/fotos/galeria_5.jpeg" alt="Galería del campo 5" class="img-fluid rounded">
             </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="img-gal" data-gallery="galeria" data-index="5">
+            <div class="img-gal" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="5">
               <img src="images/fotos/galeria_6.png" alt="Galería del campo 6" class="img-fluid rounded">
             </div>
           </div>
@@ -1065,16 +1040,78 @@
     </div>
     <!-- /.site-footer -->
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-      <span class="lightbox-close">&times;</span>
-      <button class="lightbox-nav lightbox-prev">&#10094;</button>
-      <button class="lightbox-nav lightbox-next">&#10095;</button>
-      <div class="lightbox-content">
-        <img id="lightbox-img" src="" alt="">
-      </div>
-      <div class="lightbox-counter">
-        <span id="lightbox-current">1</span> / <span id="lightbox-total">6</span>
+    <!-- Bootstrap Modal Gallery -->
+    <div class="modal fade modal-gallery" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/fotos/galeria_1.png" class="d-block w-100" alt="Atardecer en la zona">
+                  <div class="carousel-caption">
+                    <h5>Atardecer en la Zona</h5>
+                    <p>Atardecer sobre el campo, mostrando la belleza natural de La Abrita</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/fotos/galeria_2.png" class="d-block w-100" alt="Plantas de nopal con tunas">
+                  <div class="carousel-caption">
+                    <h5>Vegetación Autóctona</h5>
+                    <p>Nopales con tunas, parte del ecosistema nativo del campo</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/fotos/galeria_3.png" class="d-block w-100" alt="Vista del río dulce desde una playa">
+                  <div class="carousel-caption">
+                    <h5>Acceso al Río Dulce</h5>
+                    <p>Vista privilegiada del Río Dulce, fuente de agua y recreación a solo 9 km</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/fotos/galeria_4.png" class="d-block w-100" alt="Árboles autóctonos">
+                  <div class="carousel-caption">
+                    <h5>Bosque Nativo</h5>
+                    <p>Quebracho, algarrobo y otras especies valiosas en estado virgen</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/fotos/galeria_5.jpeg" class="d-block w-100" alt="Vista del río dulce">
+                  <div class="carousel-caption">
+                    <h5>Río Dulce</h5>
+                    <p>Recurso hídrico estratégico para el desarrollo del campo</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/fotos/galeria_6.png" class="d-block w-100" alt="Camino mejorado">
+                  <div class="carousel-caption">
+                    <h5>Acceso Directo</h5>
+                    <p>Camino vecinal enripiado desde Ruta 9, facilitando el ingreso al campo</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1095,7 +1132,6 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/custom.js"></script>
