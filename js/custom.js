@@ -31,7 +31,7 @@
 		}, 200);
 	};
 	preloader();
-
+	
 	// Bootstrap Gallery Modal - Simple initialization
 	var galleryModal = function() {
 		var galleryModalEl = document.getElementById('galleryModal');
