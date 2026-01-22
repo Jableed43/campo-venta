@@ -1,0 +1,17 @@
+# robots.txt para Campo La Abrita
+# https://jableed43.github.io/campo-venta/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jableed43.github.io/campo-venta/sitemap.xml
+
+# No indexar archivos de sistema
+Disallow: /css/
+Disallow: /js/
+Disallow: /fonts/
+
+# Permitir imágenes
+Allow: /images/
+
