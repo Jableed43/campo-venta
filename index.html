@@ -9,11 +9,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Campo Labrita" />
+    <meta name="author" content="Campo La Abrita" />
     <link rel="shortcut icon" href="favicon.png" />
 
-    <meta name="description" content="Campo de 150 hectáreas con bosque nativo en Labrita, Santiago del Estero. Infraestructura lista, riego garantizado. $900/ha. Ideal para agricultura, ganadería y turismo rural." />
-    <meta name="keywords" content="campo en venta, santiago del estero, labrita, bosque nativo, campo agricola, campo ganadero, terreno rural" />
+    <meta name="description" content="Campo de 150 hectáreas con bosque nativo en La Abrita, Santiago del Estero. Infraestructura lista, riego garantizado. $900/ha. Ideal para agricultura, ganadería y turismo rural." />
+    <meta name="keywords" content="campo en venta, santiago del estero, la abrita, bosque nativo, campo agricola, campo ganadero, terreno rural" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -72,17 +72,187 @@
         width: 100%;
         position: absolute;
       }
+      /* Hero imagen estática */
+      .hero > .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        min-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        z-index: 1;
+      }
+      .hero > .img.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      /* Background semitransparente para textos del hero */
+      .hero .lead {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        display: inline-block;
+        backdrop-filter: blur(5px);
+      }
+      .hero .price-container {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 1.5rem 2rem;
+        border-radius: 8px;
+        display: inline-block;
+        backdrop-filter: blur(5px);
+      }
       .img-gal {
         display: block;
         overflow: hidden;
         border-radius: 8px;
         transition: transform 0.3s ease;
+        height: 300px;
+        cursor: pointer;
       }
       .img-gal:hover {
         transform: scale(1.05);
       }
       .img-gal img {
         transition: transform 0.3s ease;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* Lightbox Modal */
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        overflow: hidden;
+      }
+      .lightbox.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lightbox-content img {
+        max-width: 100%;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 8px;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 10000;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+      .lightbox-close:hover {
+        background: rgba(0, 0, 0, 0.8);
+        transform: rotate(90deg);
+      }
+      .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        font-size: 30px;
+        padding: 15px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        z-index: 10000;
+      }
+      .lightbox-nav:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+      .lightbox-prev {
+        left: 20px;
+      }
+      .lightbox-next {
+        right: 20px;
+      }
+      .lightbox-counter {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+      /* Mobile scroll horizontal */
+      @media (max-width: 768px) {
+        .lightbox-content {
+          max-width: 100%;
+          width: 100%;
+          height: 100%;
+          overflow-x: auto;
+          overflow-y: hidden;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          scroll-behavior: smooth;
+        }
+        .lightbox-content img {
+          width: 100vw;
+          height: 100vh;
+          object-fit: contain;
+          scroll-snap-align: center;
+          flex-shrink: 0;
+          display: block;
+        }
+        .lightbox-nav {
+          display: none;
+        }
+        .lightbox-close {
+          top: 10px;
+          right: 10px;
+          width: 40px;
+          height: 40px;
+          font-size: 30px;
+        }
+        .lightbox-counter {
+          bottom: 10px;
+          z-index: 10001;
+        }
       }
       @media (max-width: 768px) {
         .whatsapp-float {
@@ -163,10 +333,85 @@
           font-size: 1rem;
         }
       }
+      /* Créditos de fotografía */
+      .photo-credit-hero {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 14px;
+        border-radius: 6px;
+        font-size: 12px;
+        z-index: 10;
+        backdrop-filter: blur(5px);
+      }
+      .photo-credit-hero a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .photo-credit-hero a:hover {
+        color: #87CEEB;
+        text-decoration: underline;
+      }
+      .photo-credit-inline {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 11px;
+        color: #666;
+      }
+      .photo-credit-inline a {
+        color: #666;
+        text-decoration: none;
+      }
+      .photo-credit-inline a:hover {
+        color: #2d5016;
+        text-decoration: underline;
+      }
+      /* Crédito en lightbox */
+      .lightbox-credit {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 12px;
+        z-index: 10001;
+        backdrop-filter: blur(5px);
+      }
+      .lightbox-credit a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .lightbox-credit a:hover {
+        color: #87CEEB;
+        text-decoration: underline;
+      }
+      @media (max-width: 768px) {
+        .photo-credit-hero {
+          font-size: 10px;
+          padding: 5px 10px;
+          bottom: 10px;
+          right: 10px;
+        }
+        .lightbox-credit {
+          bottom: 50px;
+          font-size: 11px;
+          padding: 6px 12px;
+        }
+        .photo-credit-inline {
+          font-size: 10px;
+        }
+      }
     </style>
 
     <title>
-      Campo 150 ha en Venta - Labrita, Santiago del Estero | $900/ha
+      Campo 150 ha en Venta - La Abrita, Santiago del Estero | $900/ha
     </title>
   </head>
   <body>
@@ -183,7 +428,7 @@
       <div class="container">
         <div class="menu-bg-wrap">
           <div class="site-navigation">
-            <a href="index.html" class="logo m-0 float-start">Campo Labrita</a>
+            <a href="index.html" class="logo m-0 float-start">Campo La Abrita</a>
 
             <ul
               class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
@@ -209,19 +454,10 @@
     </nav>
 
     <div class="hero" id="inicio">
-      <div class="hero-slide">
-        <div
-          class="img overlay"
-          style="background-image: url('images/hero_bg_3.jpg')"
-        ></div>
-        <div
-          class="img overlay"
-          style="background-image: url('images/hero_bg_2.jpg')"
-        ></div>
-        <div
-          class="img overlay"
-          style="background-image: url('images/hero_bg_1.jpg')"
-        ></div>
+      <div class="img overlay" style="background-image: url('images/fotos/portada.jpeg')">
+        <span class="photo-credit-hero">
+          Foto: <a href="https://www.instagram.com/matiassilvafotografia/" target="_blank" rel="noopener">Matias Silva</a>
+        </span>
       </div>
 
       <div class="container">
@@ -233,9 +469,8 @@
             <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="100">
               Bosque Nativo + Infraestructura Lista - Tu Inversión Ideal
             </p>
-            <div class="mb-4" data-aos="fade-up" data-aos-delay="150">
-              <h2 class="text-white display-4 fw-bold mb-2">$900/ha</h2>
-              <p class="text-white-50">Inversión total: $135.000</p>
+            <div class="mb-4 price-container" data-aos="fade-up" data-aos-delay="150">
+              <h2 class="text-white display-4 fw-bold mb-0">$900/ha</h2>
             </div>
             <div class="d-flex gap-3 justify-content-center flex-wrap" data-aos="fade-up" data-aos-delay="200">
               <a href="#contacto" class="btn btn-primary btn-lg px-5 py-3">CONSULTAR AHORA</a>
@@ -327,8 +562,7 @@
               <span class="flaticon-building d-block mb-3" style="font-size: 3rem; color: #2d5016;"></span>
               <h3 class="heading">Precio</h3>
               <p class="text-black-50 mb-0">
-                <strong>$900/ha</strong><br>
-                Inversión total: $135.000
+                <strong>$900/ha</strong>
               </p>
             </div>
           </div>
@@ -347,7 +581,7 @@
               <span class="flaticon-house-1 d-block mb-3" style="font-size: 3rem; color: #2d5016;"></span>
               <h3 class="heading">Ubicación</h3>
               <p class="text-black-50 mb-0">
-                <strong>Labrita</strong><br>
+                <strong>La Abrita</strong><br>
                 Santiago del Estero
               </p>
             </div>
@@ -503,7 +737,7 @@
         <div class="row justify-content-between mb-5">
           <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
             <div class="img-about dots">
-              <img src="images/hero_bg_3.jpg" alt="Campo con bosque nativo" class="img-fluid" />
+              <img src="images/fotos/caracteristicas_del_terreno.png" alt="Características del terreno" class="img-fluid" />
             </div>
           </div>
           <div class="col-lg-4">
@@ -710,9 +944,9 @@
         <div class="row mt-5">
           <div class="col-12 text-center">
             <div class="opportunity-highlight">
-              <h3 class="h4 mb-3" style="color: white; font-weight: 600;">💡 Inversión Total: $135.000</h3>
+              <h3 class="h4 mb-3" style="color: white; font-weight: 600;">💡 $900 por hectárea</h3>
               <p class="mb-0" style="color: rgba(255,255,255,0.95); font-size: 1.1rem;">
-                <strong>$900 por hectárea</strong> - Precio competitivo con potencial de revalorización excepcional
+                Precio competitivo con potencial de revalorización excepcional
               </p>
             </div>
           </div>
@@ -734,34 +968,34 @@
         </div>
         <div class="row g-4">
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <a href="images/hero_bg_1.jpg" class="img-gal">
-              <img src="images/hero_bg_1.jpg" alt="Vista del campo" class="img-fluid rounded">
-            </a>
+            <div class="img-gal" data-gallery="galeria" data-index="0">
+              <img src="images/fotos/galeria_1.png" alt="Galería del campo 1" class="img-fluid rounded">
+            </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <a href="images/hero_bg_2.jpg" class="img-gal">
-              <img src="images/hero_bg_2.jpg" alt="Bosque nativo" class="img-fluid rounded">
-            </a>
+            <div class="img-gal" data-gallery="galeria" data-index="1">
+              <img src="images/fotos/galeria_2.png" alt="Galería del campo 2" class="img-fluid rounded">
+            </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <a href="images/hero_bg_3.jpg" class="img-gal">
-              <img src="images/hero_bg_3.jpg" alt="Paisaje del campo" class="img-fluid rounded">
-            </a>
+            <div class="img-gal" data-gallery="galeria" data-index="2">
+              <img src="images/fotos/galeria_3.png" alt="Galería del campo 3" class="img-fluid rounded">
+            </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <a href="images/img_1.jpg" class="img-gal">
-              <img src="images/img_1.jpg" alt="Terreno" class="img-fluid rounded">
-            </a>
+            <div class="img-gal" data-gallery="galeria" data-index="3">
+              <img src="images/fotos/galeria_4.png" alt="Galería del campo 4" class="img-fluid rounded">
+            </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-            <a href="images/img_2.jpg" class="img-gal">
-              <img src="images/img_2.jpg" alt="Flora nativa" class="img-fluid rounded">
-            </a>
+            <div class="img-gal" data-gallery="galeria" data-index="4">
+              <img src="images/fotos/galeria_5.jpeg" alt="Galería del campo 5" class="img-fluid rounded">
+            </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-            <a href="images/img_3.jpg" class="img-gal">
-              <img src="images/img_3.jpg" alt="Vista aérea" class="img-fluid rounded">
-            </a>
+            <div class="img-gal" data-gallery="galeria" data-index="5">
+              <img src="images/fotos/galeria_6.png" alt="Galería del campo 6" class="img-fluid rounded">
+            </div>
           </div>
         </div>
       </div>
@@ -776,19 +1010,10 @@
           </p>
           <div class="d-flex gap-3 justify-content-center flex-wrap">
             <a
-              href="#contacto"
+              href="https://wa.me/5491121905361?text=Hola,%20me%20interesa%20el%20campo%20de%20150%20hectáreas%20en%20La%20Abrita"
+              target="_blank"
               class="btn btn-primary text-white py-3 px-5"
               >SOLICITAR INFORMACIÓN</a
-            >
-            <a
-              href="#contacto"
-              class="btn btn-outline-primary py-3 px-5"
-              >AGENDAR VISITA</a
-            >
-            <a
-              href="#contacto"
-              class="btn btn-outline-secondary py-3 px-5"
-              >CONSULTAR PRECIO</a
             >
           </div>
         </div>
@@ -803,20 +1028,7 @@
           <div class="col-lg-6">
             <div class="widget">
               <h3>Contacto</h3>
-              <p class="mb-3">Campo en Venta - Labrita, Santiago del Estero</p>
-              <ul class="list-unstyled links">
-                <li><a href="tel://+549XXXXXXXXX">+54 9 XXXXXXXXX</a></li>
-                <li>
-                  <a href="mailto:contacto@campolabrita.com">contacto@campolabrita.com</a>
-                </li>
-                <li class="mt-3">
-                  <a href="https://wa.me/549XXXXXXXXX?text=Hola,%20me%20interesa%20el%20campo%20en%20Labrita" 
-                     target="_blank" 
-                     class="btn btn-success">
-                    <span class="icon-whatsapp me-2"></span>Contactar por WhatsApp
-                  </a>
-                </li>
-              </ul>
+              <p class="mb-3">Campo en Venta - La Abrita, Santiago del Estero</p>
             </div>
             <!-- /.widget -->
           </div>
@@ -844,7 +1056,7 @@
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              Campo Labrita. Todos los derechos reservados.
+              Campo La Abrita. Todos los derechos reservados.
             </p>
           </div>
         </div>
@@ -853,8 +1065,21 @@
     </div>
     <!-- /.site-footer -->
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <button class="lightbox-nav lightbox-prev">&#10094;</button>
+      <button class="lightbox-nav lightbox-next">&#10095;</button>
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="">
+      </div>
+      <div class="lightbox-counter">
+        <span id="lightbox-current">1</span> / <span id="lightbox-total">6</span>
+      </div>
+    </div>
+
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/549XXXXXXXXX?text=Hola,%20me%20interesa%20el%20campo%20de%20150%20hectáreas%20en%20Labrita" 
+    <a href="https://wa.me/5491121905361?text=Hola,%20me%20interesa%20el%20campo%20de%20150%20hectáreas%20en%20La%20Abrita" 
        target="_blank" 
        class="whatsapp-float" 
        title="Contactar por WhatsApp">
