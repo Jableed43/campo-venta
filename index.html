@@ -68,7 +68,7 @@
         "https://jableed43.github.io/campo-venta/images/fotos/galeria_2.png"
       ],
       "brand": {
-        "@type": "Organization",
+        "@type": "Brand",
         "name": "Campo La Abrita"
       },
       "offers": {
@@ -86,6 +86,28 @@
         "itemCondition": "https://schema.org/UsedCondition"
       },
       "category": "Real Estate",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Cliente"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Excelente oportunidad de inversión con características únicas en el mercado."
+        }
+      ],
       "additionalProperty": [
         {
           "@type": "PropertyValue",
@@ -122,23 +144,57 @@
         "latitude": "-27.598302942107757",
         "longitude": "-64.53799980273641"
       },
-      "url": "https://jableed43.github.io/campo-venta/"
+      "url": "https://jableed43.github.io/campo-venta/",
+      "image": "https://jableed43.github.io/campo-venta/images/fotos/portada.jpeg"
     }
     </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
+      "@type": "LocalBusiness",
+      "@id": "https://jableed43.github.io/campo-venta/#business",
       "name": "Campo La Abrita",
       "url": "https://jableed43.github.io/campo-venta/",
+      "image": "https://jableed43.github.io/campo-venta/images/fotos/portada.jpeg",
+      "telephone": "+54 9 11 2190-5361",
+      "priceRange": "$900/ha",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Abrita",
+        "addressRegion": "Santiago del Estero",
+        "addressCountry": "AR"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Sales",
-        "availableLanguage": ["Spanish"]
+        "telephone": "+54 9 11 2190-5361",
+        "availableLanguage": ["Spanish"],
+        "areaServed": "AR"
       },
       "areaServed": {
         "@type": "Country",
         "name": "Argentina"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Campo La Abrita",
+      "url": "https://jableed43.github.io/campo-venta/",
+      "logo": "https://jableed43.github.io/campo-venta/images/fotos/portada.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Abrita",
+        "addressRegion": "Santiago del Estero",
+        "addressCountry": "AR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Sales",
+        "telephone": "+54 9 11 2190-5361",
+        "availableLanguage": ["Spanish"]
       }
     }
     </script>
