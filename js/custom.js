@@ -31,26 +31,6 @@
 		}, 200);
 	};
 	preloader();
-	
-
-	// Hero slider desactivado - ahora es una imagen estática
-	// var tinySdlier = function() {
-	// 	var heroSlider = document.querySelectorAll('.hero-slide');
-
-	// 	if ( heroSlider.length > 0 ) {
-	// 		var tnsHeroSlider = tns({
-	// 			container: '.hero-slide',
-	// 			mode: 'carousel',
-	// 			speed: 700,
-	// 			autoplay: true,
-	// 			controls: false,
-	// 			nav: false,
-	// 			autoplayButtonOutput: false,
-	// 			controlsContainer: '#hero-nav',
-	// 		});
-	// 	}
-	// }
-	// tinySdlier();
 
 	// Bootstrap Gallery Modal - Simple initialization
 	var galleryModal = function() {

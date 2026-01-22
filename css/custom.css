@@ -1,0 +1,372 @@
+/* ============================================
+   CUSTOM STYLES - Campo La Abrita
+   ============================================ */
+
+/* ============================================
+   WhatsApp Floating Button
+   ============================================ */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  transform: scale(1.1);
+  color: #FFF;
+  text-decoration: none;
+}
+.whatsapp-float .icon-whatsapp:before {
+  font-size: 35px;
+}
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 25px;
+  }
+}
+
+/* ============================================
+   Map Responsive
+   ============================================ */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* ============================================
+   Hero Section - Imagen Estática
+   ============================================ */
+.hero > .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  min-height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  z-index: 1;
+}
+.hero > .img.overlay:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Background semitransparente para textos del hero */
+.hero .lead {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+}
+.hero .price-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+}
+
+/* ============================================
+   Gallery - Imágenes con Altura Uniforme
+   ============================================ */
+.img-gal {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  height: 300px;
+  cursor: pointer;
+}
+.img-gal:hover {
+  transform: scale(1.05);
+}
+.img-gal img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   Bootstrap Modal Gallery
+   ============================================ */
+.modal-gallery .modal-dialog {
+  max-width: 95vw;
+  height: 95vh;
+  margin: 2.5vh auto;
+}
+.modal-gallery .modal-content {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  border: none;
+}
+.modal-gallery .modal-body {
+  padding: 20px;
+  height: calc(100% - 56px);
+  overflow-y: auto;
+}
+.modal-gallery .carousel-item {
+  text-align: center;
+}
+.modal-gallery .carousel-item img {
+  max-height: 70vh;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+.modal-gallery .carousel-caption {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  padding: 15px 20px;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.modal-gallery .carousel-caption h5 {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.modal-gallery .carousel-caption p {
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0;
+}
+.modal-gallery .modal-header {
+  border-bottom: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-gallery .btn-close {
+  filter: invert(1);
+}
+.modal-gallery .carousel-control-prev,
+.modal-gallery .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.modal-gallery .carousel-indicators {
+  position: relative;
+  bottom: auto;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.modal-gallery .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+.modal-gallery .carousel-indicators button.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+@media (max-width: 768px) {
+  .modal-gallery .modal-dialog {
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+  .modal-gallery .modal-body {
+    padding: 15px;
+  }
+  .modal-gallery .carousel-item img {
+    max-height: 60vh;
+  }
+  .modal-gallery .carousel-caption {
+    padding: 12px 15px;
+    margin-top: 10px;
+  }
+  .modal-gallery .carousel-control-prev,
+  .modal-gallery .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ============================================
+   Opportunity Section - Oportunidades Únicas
+   ============================================ */
+.opportunity-section {
+  background: linear-gradient(135deg, #2d5016 0%, #4a7c2a 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.opportunity-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.05)"/></svg>');
+  opacity: 0.3;
+}
+.opportunity-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+.opportunity-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.opportunity-icon {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.opportunity-number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ffd700;
+  color: #2d5016;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.opportunity-highlight {
+  background: rgba(255,255,255,0.15);
+  border-radius: 15px;
+  border: 2px solid rgba(255,255,255,0.3);
+  padding: 2rem;
+  margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .opportunity-card {
+    padding: 1.5rem;
+  }
+  .opportunity-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   Icons - Estilos Reutilizables
+   ============================================ */
+.icon-feature {
+  font-size: 3rem;
+  color: #2d5016;
+}
+
+/* ============================================
+   Photo Credits - Créditos de Fotografía
+   ============================================ */
+.photo-credit-hero {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+.photo-credit-hero a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.photo-credit-hero a:hover {
+  color: #87CEEB;
+  text-decoration: underline;
+}
+.lightbox-credit {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  z-index: 10001;
+  backdrop-filter: blur(5px);
+}
+.lightbox-credit a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.lightbox-credit a:hover {
+  color: #87CEEB;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .photo-credit-hero {
+    font-size: 10px;
+    padding: 5px 10px;
+    bottom: 10px;
+    right: 10px;
+  }
+  .lightbox-credit {
+    bottom: 50px;
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+}
+
